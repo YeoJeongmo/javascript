@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //로또 당첨
+      //로또 번호 생성기
+      function lotto() {
+        let winNum = [];
+        while (winNum.length !== 6) {
+          num = Math.floor(Math.random() * 45 + 1);
+          if (winNum.indexOf(num) === -1) {
+            winNum.push(num);
+          }
+        }
+        winNum.sort((a, b) => a - b);
+        console.log(`이번 로또 당첨 번호는 무조건 100% ${winNum} 이거임 ㅇㅇ`);
+      }
+      lotto();
+
+      // let nums = [];
+      // let b=true
+      // while (nums.length <= 6) {
+      //   let num = Math.floor(Math.random() * 45 + 1);
+      //   //중복 검사
+      //   for (let n of nums) {
+      //     if (n === num) {
+      //       b=false;
+      //     }
+      //   }
+      //   if(true){
+      //     nums.push(num)
+      //     b=!b
+      //   }
+      // }
+      // console.log(nums);
+
+
+      //4:50까지 주변 맛집 리스트에서 오늘 점심먹을 식당을 램덤으로 추천해주는 프로그램을 작성하세요 추천할 곳은 3곳을 추출하세요
+      const store00 = {
+        store: "",
+        food: "",
+      };
+      const store01 ={
+        ...store00,
+        store:"오븐의온도 부산서면점",
+        food:"쿠키"
+      }
+      const store02 ={
+        ...store00,
+        store:"개미집 서면점",
+        food:"낙곱새, 낙곱새볶음"
+      }
+      const store03 ={
+        ...store00,
+        store:"동해물회 서면점",
+        food:"물회, 잡어"
+      }
+      const store04 ={
+        ...store00,
+        store:"반핀 전포점",
+        food:"차슈덮밥, 가지튀김"
+      }
+      const store05 ={
+        ...store00,
+        store:"바오하우스 전포점",
+        food:"가지튀김"
+      }
+      const store06 ={
+        ...store00,
+        store:"굿모닝홍콩 전포점",
+        food:"탄탄면"
+      }
+      const store07 ={
+        ...store00,
+        store:"기장손칼국수 서면점",
+        food:"칼국수, 손칼국수"
+      }
+      const store08 ={
+        ...store00,
+        store:"다기야 서면점",
+        food:"치킨"
+      }
+      const store09 ={
+        ...store00,
+        store:"모루식당 서면점",
+        food:"카레, 새우크림카레"
+      }
+      const store10 ={
+        ...store00,
+        store:"동희루 서면점",
+        food:"짬뽕"
+      }
+      const store11 ={
+        ...store00,
+        store:"희와제과 부산점",
+        food:"빵"
+      }
+      const store12 ={
+        ...store00,
+        store:"이재모피자 서면점",
+        food:"피자, 파스타"
+      }
+      const store13 ={
+        ...store00,
+        store:"명란김밥 부전시장",
+        food:"김밥"
+      }
+      const store14 ={
+        ...store00,
+        store:"소인수분해 서면점",
+        food:"곱창, 대창"
+      }
+      const store15 ={
+        ...store00,
+        store:"칸다소바 서면점",
+        food:"마제소바, 아부라소바"
+      }
+      const store16 ={
+        ...store00,
+        store:"가야밀면 서면점",
+        food:"밀면, 물밀면"
+      }
+      const store17 ={
+        ...store00,
+        store:"마라톤집 서면점",
+        food:"김치찌개"
+      }
+      const store18 ={
+        ...store00,
+        store:"맛찬들왕소금구이 서면점",
+        food:"삼겹살, 고기집"
+      }
+      const store19 ={
+        ...store00,
+        store:"수림식당 서면점",
+        food:"짜장면, 탕수육"
+      }
+      const store20 ={
+        ...store00,
+        store:"모던테이블 서면점",
+        food:"와플, 딸기와플"
+      }
+      console.log(store01,store02)
+
+      function lunchStore(){
+        let recomandStore=[]
+        let store=[store01,store02,store03,store04,store05,store06,store07,store08,store09,store10
+        ,store11,store12,store13,store14,store15,store16,store17,store18,store19,store20]
+        while(recomandStore.length<3){
+          num=Math.floor(Math.random()*store.length)
+          recomandStore.push(store[num])
+          store.splice(num,1)
+        }
+        for(let i=0;i<3;i++){
+          const{store,food}=recomandStore[i]
+          console.log(`오늘의 ${i+1}번째 추천 맛집 가게 이름은 ${store}이며 대표 메뉴는 ${food}입니다.`)
+        }
+      }
+      lunchStore()
+    </script>
+  </body>
+</html>

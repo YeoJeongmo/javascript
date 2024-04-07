@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //03-02-example.html
+
+      //5가지 키워드로 정리하는 핵심 포인트
+      //사용자로부터 글자를 입력 받을 때는 prompt()함수를 사용합니다.
+      //어떤 자료형의 값을 다른 자료형으로 변경하는 것을 자료형 변환이라고 합니다.
+      //숫자 자료형으로 변환할 때 Number() 함수를 사용합니다.
+      //문자열 자료형으로 변환할 때 String() 함수를 사용합니다.
+      //불 자료형으로 변환할 때 Boolean() 함수를 사용합니다.
+
+      //확인 문제
+      // 1. 다음 중 사용자로부터 불 입력을 받는 함수는 어떤 것인가요?
+      // ① input()
+      // ② boolInput()  (O)
+      // ③ confirm()
+      // ④ prompt()
+
+      // 2. 다음 표의 빈칸을 채우세요
+      // Number() : 숫자 자료형으로 변환합니다
+      // String() : 문자열 자료형으로 변환합니다
+      // Boolean(): 불 자료형으로 변환합니다.
+
+      // 3. 사용자로부터 숫자를 입력받아 cm를 inch단위로 변환하여 출력하는 프로그램을 만들어 보세요.
+      //    1cm는 0.393701inch로 변환할 수 있습니다.
+      //<script>
+      // 숫자를 입력받습니다.
+      // const input=prompt("cm 단위의 숫자를 입력해주세요.")
+      // // 입력을 숫자로 변경하고 cm 단위로 변경합니다
+      // const cm=Number(input)
+      // const inch=cm*0.393701
+      // // 출력합니다.
+      // console.log(input+"cm는 "+inch+"inch 입니다.")
+      //실행 결과
+      //cm 단위의 숫자를 입력해주세요.
+      //입력> 24
+      //24cm는 9.448824inch 입니다.
+      //<script>
+
+      // 4. 사용자로부터 원의 반지름을 입력받아 원의 넓이와 둘레를 구하는 프로그램을 만들어 보세요.
+      //    '넓이 = 3.14 * 반지름 * 반지름', '둘레 = 2 * 3.14 * 반지름' 이라는 공식으로 구할 수 있습니다.
+      //<script>
+      //숫자를 입력 받습니다.
+      // const inputRadius=prompt("원의 반지름을 입력해주세요.")
+      // //출력합니다
+      // const radius=Number(inputRadius)
+      // const pi=3.14
+      // const area=pi*radius*radius
+      // const round=2*pi*radius
+      // console.log("원의 반지름 : "+radius+"\n"
+      //           + "원의 넓이 : "+area+"\n"
+      //           + "원의 둘레 : "+round)
+      //실행결과
+      //원의 반지름을 입력해주세요.
+      //입력> 4
+      //원의 반지름 : 4
+      //원의 넓이 : 50.24
+      //원의 둘레 : 25.12
+      //<script>
+
+      // 5. 현재 환율을 기반으로 사용자에게 숫자를 입력받아 달러(USD)에서 원화(KRW)로 환율을 변환하는
+      //    프로그램을 만들어보세요. 현재 집필 시점의 환율은 1달러=1207원입니다.
+      //<script>
+      //숫자를 입력 받습니다.
+      // const inputMoney=prompt("달러 단위의 금액을 입력해주세요.")
+      // const USD=Number(inputMoney)
+      // const KRW=USD*1207
+      // //출력합니다.
+      // console.log("달러: "+USD+"\n→원화: "+KRW)
+      //실행 결과
+      //달러 단위의 금액을 입력해주세요.
+      //입력> 1000
+      //달러: 1000
+      //→ 원화: 1207000
+      //<script>
+
+      // 6. 위의 문제들처럼 데이터를 입력받아 처리하고 출력하는 프로그램에는 어떤 것이 있는지 생각해 보고
+      //    3개 정도 적어보세요. 가능하면 직접 구현해 보세요.
+      const inputAge = prompt("당신은 어느 해에 태어났습니까?\nex)1990");
+      const y = 2024;
+      let yourAge = Number(inputAge);
+      yourAge = y - inputAge + 1;
+      if (yourAge > 0) {
+        console.log("당신의 나이는 " + yourAge + "세 입니다.");
+      } else {
+        console.log("숫자를 정확히 입력해주세요.");
+      }
+
+      const inputLike = prompt("?");
+    </script>
+  </body>
+</html>
