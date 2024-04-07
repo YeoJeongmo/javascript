@@ -26,7 +26,7 @@
         this.length=length
       }
       set length(value){
-        if(length<=0){
+        if(value<=0){
           throw "길이는 0보다 커야 합니다."
         }
         this.#length=value
@@ -47,7 +47,7 @@
     //set 메소드를 만들어 주면
     //속성을 직접 접근하는 형태로 쓰더라도
     //set 메소드가 내부적으로 실행 된다.
-    // const square1=new Square(-10)
+    const square1=new Square(-10)
     //내외부 상관없이 직접 접근 하더라도 set 키워드로 만들어진
     //setter 메소드가 실행된다
     console.log("글자수 확인".length)

@@ -144,22 +144,22 @@
       //어떤 숫자가 무한(Infinity)인지 확인 할 때 - isFinite()
       //Number.isNaN(), Number.isFinite()
       const m=Number("숫자로 변환할 수 없는 경우")
-      console.log(m)
+      console.log(m)                //NaN
       //비교 연산자 사용 불가
-      console.log(m===NaN)
-      console.log(m==NaN)
-      console.log(Number.isNaN(m))
+      console.log(m===NaN)          //false
+      console.log(m==NaN)           //false
+      console.log(Number.isNaN(m))  //true
       
       //Infinity를 사용해 보겠습니다
       const n=10/0
-      console.log(n)
+      console.log(n)                    //infinity
       //양의 무한대
       const o=10/0
-      console.log(o)
+      console.log(o)                    //infinity
       //음의 무한대
-      console.log(Number.isFinite(n))
+      console.log(Number.isFinite(n))   //false
       //isFinite 유한한 숫자인가? 무한한 숫자면 false가 나온다
-      console.log(Number.isFinite(o))
+      console.log(Number.isFinite(o))   //false
       
       //일반적인 숫자는 셀수 있으므로 true가 나온다
       console.log(Number.isFinite(1))
